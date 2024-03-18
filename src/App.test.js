@@ -8,6 +8,7 @@ test("react test demo" , () => {
 
 })
 
+
 test("react test demo2" , () => {
   render(<App/>)
   const textData = screen.getByTitle(/Ai generated image/i)
@@ -27,3 +28,12 @@ test("react test demo2" , () => {
   
 // })
 
+
+describe("UI test case group",() => {
+  test("react test hello",() => {
+    render(<App/>)
+    const textData = screen.getByTitle(/Ai generated image/i)
+    expect(textData).toBeInTheDocument()
+  })
+
+})
